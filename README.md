@@ -1,4 +1,6 @@
-Este API permite gestionar registros de entrada y salida de vehículos en un parqueadero. Ofrece las siguientes funcionalidades:
+# API de Parqueadero
+
+Esta es una API RESTful diseñada para gestionar registros de vehículos en un parqueadero. Permite realizar operaciones CRUD (Crear, Leer, Actualizar, Eliminar) sobre los registros de parqueadero.
 
 ## Requisitos
 
