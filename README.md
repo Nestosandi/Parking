@@ -1,9 +1,12 @@
 Este API permite gestionar registros de entrada y salida de vehículos en un parqueadero. Ofrece las siguientes funcionalidades:
 
 ## Requisitos
-Node.js: Framework para el desarrollo del API.
-Express.js: Framework para la creación de aplicaciones web con Node.js.
-Prisma: ORM para la interacción con la base de datos PostgreSQL.
+
+  1. Node.js: Framework para el desarrollo del API.
+     
+  2. Express.js: Framework para la creación de aplicaciones web con Node.js.
+     
+  3. Prisma: ORM para la interacción con la base de datos PostgreSQL.
 
 ## Funciones
 
