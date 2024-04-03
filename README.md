@@ -27,7 +27,7 @@ Prisma: ORM para la interacción con la base de datos PostgreSQL.
   3. /api/v1/parkingrecords	GET	Obtiene todos los registros de parqueadero.
   4. /api/v1/parkingrecords/:id	DELETE	Elimina un registro de parqueadero.
 
-# Ejemplo JSON
+## Ejemplo JSON
 POST /api/v1/parkingrecords
 {
   "id":"1",
