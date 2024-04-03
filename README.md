@@ -6,7 +6,7 @@ Este API permite gestionar registros de entrada y salida de vehículos en un par
      
   2. Express.js: Framework para la creación de aplicaciones web con Node.js.
      
-  3. Prisma: ORM para la interacción con la base de datos PostgreSQL.
+  3. Prisma: ORM para la interacción con la base de datos MongoDB ATLAS.
 
 ## Funciones
 
