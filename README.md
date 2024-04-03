@@ -1,6 +1,6 @@
 # API de Parqueadero
 
-Esta es una API RESTful diseñada para gestionar registros de vehículos en un parqueadero. Permite realizar operaciones CRUD (Crear, Leer, Actualizar, Eliminar) sobre los registros de parqueadero.
+Esta es una API REST diseñada para gestionar registros de vehículos en un parqueadero. Permite realizar operaciones CRUD (Crear, Leer, Actualizar, Eliminar) sobre los registros de parqueadero.
 
 ## Requisitos
 
