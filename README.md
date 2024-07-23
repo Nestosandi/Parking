@@ -37,10 +37,10 @@ This is a REST API designed to manage vehicle records in a parking lot. It allow
 {
   "id": "1",
   "type": "car",
-  "license": "ABC123",
+  "license": "XYZ123",
   "model": "Toyota Corolla",
-  "year": 2020,
-  "entryTime": "2023-11-14T10:00:00.000Z",
+  "year": 2023,
+  "entryTime": "2024-11-14T10:00:00.000Z",
   "exitTime": null
 }
 ```
@@ -87,7 +87,7 @@ The endpoint `/api/v1/parkingrecords/:id` is used to delete a specific parking r
 
 For any inquiries or issues, please contact:
 - **Email:** ernest.drv@gmail.com
-- **GitHub:** [yourusername](https://github.com/nestosandi)
+- **GitHub:** [Nestosandi](https://github.com/nestosandi)
 
 ---
 
