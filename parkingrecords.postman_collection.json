@@ -2,13 +2,13 @@
 	"info": {
 		"_postman_id": "70ae056d-02c6-4667-a893-7436f7c13f3e",
 		"name": "parkingrecords",
-		"description": "Solicitudes POST, GET, PUT y DELETE",
+		"description": "Requests POST, GET, PUT and DELETE",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "34051517"
 	},
 	"item": [
 		{
-			"name": "Modificar Registro",
+			"name": "Change record",
 			"request": {
 				"method": "PUT",
 				"header": [],
@@ -39,7 +39,7 @@
 			"response": []
 		},
 		{
-			"name": "Solicitar Registros",
+			"name": "Get Record",
 			"request": {
 				"method": "GET",
 				"header": []
@@ -47,7 +47,7 @@
 			"response": []
 		},
 		{
-			"name": "Eliminar Registro",
+			"name": "Delete Record",
 			"request": {
 				"method": "DELETE",
 				"header": [],
@@ -69,7 +69,7 @@
 			"response": []
 		},
 		{
-			"name": "Crear Registro",
+			"name": "Create Record",
 			"request": {
 				"method": "POST",
 				"header": [],

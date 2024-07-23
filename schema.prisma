@@ -9,7 +9,7 @@ generator client {
 
 model parkingrecord {
   id String @id @map("_id")
-  type String //carro or moto
+  type String
   license String
   model String
   year String

@@ -1,8 +1,8 @@
-{"_id":"2","type":"car","license":"ABC234","model":"KIA","year":"2019","entryTime":{"$date":"2023-04-03T13:44:02Z"},"exitTime":null}
-{"_id":"3","type":"car","license":"ABC234","model":"KIA","year":"2019","entryTime":{"$date":"2023-04-03T13:44:02Z"},"exitTime":null}
-{"_id":"4","type":"car","license":"ABC224","model":"KIA","year":"2019","entryTime":{"$date":"2023-04-03T13:44:02Z"},"exitTime":null}
+{"_id":"2","type":"car","license":"ABC234","model":"KIA Picanto","year":"2019","entryTime":{"$date":"2023-04-03T13:44:02Z"},"exitTime":null}
+{"_id":"3","type":"car","license":"XYZ234","model":"Renault Clio","year":"2019","entryTime":{"$date":"2023-04-03T13:44:02Z"},"exitTime":null}
+{"_id":"4","type":"car","license":"ASD224","model":"Chevrolet Logan","year":"2019","entryTime":{"$date":"2023-04-03T13:44:02Z"},"exitTime":null}
 {"_id":"5","type":"moto","license":"ABC224","model":"Yamaha","year":"2019","entryTime":{"$date":"2023-04-03T13:44:02Z"},"exitTime":null}
-{"_id":"6","type":"moto","license":"ABC224","model":"Yamaha","year":"2022","entryTime":{"$date":"2023-04-03T13:44:02Z"},"exitTime":null}
-{"_id":"7","type":"moto","license":"ABC224","model":"Yamaha","year":"2022","entryTime":{"$date":"2023-04-03T13:44:02Z"},"exitTime":null}
-{"_id":"8","type":"moto","license":"ABC224","model":"BMW","year":"2022","entryTime":{"$date":"2023-04-03T13:44:02Z"},"exitTime":null}
-{"_id":"9","type":"car","license":"ABC224","model":"kia picanto","year":"2022","entryTime":{"$date":"2023-04-03T13:44:02Z"},"exitTime":null}
+{"_id":"6","type":"moto","license":"XYZ224","model":"Suzuki","year":"2022","entryTime":{"$date":"2023-04-03T13:44:02Z"},"exitTime":null}
+{"_id":"7","type":"moto","license":"ASD224","model":"BMW","year":"2022","entryTime":{"$date":"2023-04-03T13:44:02Z"},"exitTime":null}
+{"_id":"8","type":"moto","license":"IOP224","model":"Mercedes Benz","year":"2022","entryTime":{"$date":"2023-04-03T13:44:02Z"},"exitTime":null}
+{"_id":"9","type":"car","license":"JKL224","model":"Toyota TXL","year":"2024","entryTime":{"$date":"2023-04-03T13:44:02Z"},"exitTime":null}

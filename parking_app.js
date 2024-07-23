@@ -1,5 +1,6 @@
+// API Rest to manage a parking lot
 const express = require('express');
-// Se utiliza Prisma ORM para interactuar con la base de datos
+// Prisma ORM is used to interact with the database.
 const { PrismaClient } = require('@prisma/client');
 
 const app = express();
@@ -8,12 +9,12 @@ const prisma = new PrismaClient();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Endpoint para crear registros de parqueadero
+// Created an Endpoint to manage the new records
 app.post("/api/v1/parkingrecords", async (req, res) => {
     const { id,type, license, model, year, entryTime, exitTime } = req.body;
 
     try {
-        // Verificar el número de registros de tipo carro y moto que no han salido del parqueadero
+        // Verify the number of records of type car and motorcycle that have not left the parking lot.
         const carsCount = await prisma.parkingrecord.count({
             where: {
                 type: 'car',
@@ -28,15 +29,15 @@ app.post("/api/v1/parkingrecords", async (req, res) => {
             }
         });
 
-        // Verificar si se ha alcanzado el límite de carros (5) o motos (10)
+        // Verify if the limit of cars (5) or motorcycle (10) is reached
         if ((type === 'car' && carsCount >= 5) || (type === 'moto' && motorcyclesCount >= 10)) {
             return res.status(400).json({
                 success: false,
-                message: "El parqueadero está lleno para este tipo de vehículo",
+                message: "The parking lot is full for this type of vehicle",
             });
         }
 
-        // Crear el nuevo registro de parqueadero si no se ha alcanzado el límite
+        // Create the new parking lot record if the limit has not been reached.
         const newRecord = await prisma.parkingrecord.create({
             data: {
                 id: id,
@@ -51,23 +52,23 @@ app.post("/api/v1/parkingrecords", async (req, res) => {
 
         res.status(201).json({
             success: true,
-            message: "Registro de parqueadero creado exitosamente",
+            message: "Record created successfully",
             data: newRecord
         });
     } catch (error) {
-        console.error("Error creando el registro de parqueadero", error);
-        res.status(500).send("Error interno del servidor");
+        console.error("Error creating a new record", error);
+        res.status(500).send("Internal error server");
     }
 });
 
 
-// Endpoint para actualizar registros de parqueadero, en este caso la hora de salida
+// Endpoint to update parking records, in this case the exit time
 app.put("/api/v1/parkingrecords/:id", async (req, res) => {
     const id = req.params.id;
     const { exitTime } = req.body;
 
     try {
-        // Verificar si el registro de parqueadero existe
+        // Verify if the parking record exists
         const record = await prisma.parkingrecord.findUnique({
             where: {
                 id: id
@@ -77,11 +78,11 @@ app.put("/api/v1/parkingrecords/:id", async (req, res) => {
         if (!record) {
             return res.status(404).json({
                 success: false,
-                message: "Registro de parqueadero no encontrado",
+                message: "Record not found",
             });
         }
 
-        // Actualizar el registro de parqueadero con la hora de salida
+        // Updated the parking record with the exit time
         const updatedRecord = await prisma.parkingrecord.update({
             where: {
                 id: id
@@ -93,19 +94,19 @@ app.put("/api/v1/parkingrecords/:id", async (req, res) => {
 
         res.status(200).json({
             success: true,
-            message: "Registro de parqueadero actualizado exitosamente",
+            message: "Parking record updated successfully",
             data: updatedRecord
         });
     } catch (error) {
-        console.error("Error actualizando el registro de parqueadero", error);
-        res.status(500).send("Error interno del servidor");
+        console.error("Error updating the parking record", error);
+        res.status(500).send("Internal Error Server");
     }
 });
 
-// Endpoint para obtener todos los registros de parqueadero
+// Endpoint to get all parking records
 app.get("/api/v1/parkingrecords", async (req, res) => {
     try {
-        // Obtener todos los registros de parqueadero
+        // Get all parking records
         const records = await prisma.parkingrecord.findMany();
 
         res.status(200).json({
@@ -113,17 +114,17 @@ app.get("/api/v1/parkingrecords", async (req, res) => {
             data: records
         });
     } catch (error) {
-        console.error("Error obteniendo los registros de parqueadero", error);
-        res.status(500).send("Error interno del servidor");
+        console.error("Error getting the parking records", error);
+        res.status(500).send("Internal Error Server");
     }
 });
 
-// Endpoint para borrar registros de parqueadero
+// Endpoint to delete parking records
 app.delete("/api/v1/parkingrecords/:id", async (req, res) => {
     const id = req.params.id;
 
     try {
-        // Verificar si el registro de parqueadero existe
+        // Verify if the parking record exists
         const record = await prisma.parkingrecord.findUnique({
             where: {
                 id: id
@@ -133,7 +134,7 @@ app.delete("/api/v1/parkingrecords/:id", async (req, res) => {
         if (!record) {
             return res.status(404).json({
                 success: false,
-                message: "Registro de parqueadero no encontrado",
+                message: "Parking Record not found",
             });
         }
 
@@ -146,18 +147,18 @@ app.delete("/api/v1/parkingrecords/:id", async (req, res) => {
 
         res.status(200).json({
             success: true,
-            message: "Registro de parqueadero eliminado exitosamente",
+            message: "Parking record deleted successfully",
         });
     } catch (error) {
-        console.error("Error eliminando el registro de parqueadero", error);
-        res.status(500).send("Error interno del servidor");
+        console.error("Error deleting the parking recor", error);
+        res.status(500).send("Internal Error Server");
     }
 });
 
 
 const PORT = process.env.PORT || 3000;
 
-// Iniciar el servidor
+// Starts the server
 app.listen(PORT, () => {
-    console.log(`Servidor Express en funcionamiento en el puerto ${PORT}`);
+    console.log(`Express Server working on port ${PORT}`);
 });
